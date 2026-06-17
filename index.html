@@ -1144,22 +1144,22 @@ textarea.form-control { resize:vertical; min-height:120px; }
       </div>
       <div class="form-card fade-up d2">
         <div class="form-title">Send me a message</div>
-        <form onsubmit="handleForm(event)">
+        <form id="contact-form" onsubmit="handleForm(event)">
           <div class="form-group">
             <label class="form-label">Your name</label>
-            <input type="text" class="form-control" placeholder="Sarah Johnson" required>
+            <input type="text" name="name" class="form-control" placeholder="Sarah Johnson" required>
           </div>
           <div class="form-group">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control" placeholder="sarah@yourbrand.com" required>
+            <input type="email" name="email" class="form-control" placeholder="sarah@yourbrand.com" required>
           </div>
           <div class="form-group">
             <label class="form-label">Phone / WhatsApp (optional)</label>
-            <input type="tel" class="form-control" placeholder="+1 234 567 8900">
+            <input type="tel" name="phone" class="form-control" placeholder="+1 234 567 8900">
           </div>
           <div class="form-group">
             <label class="form-label">Service needed</label>
-            <select class="form-control" required>
+            <select name="service" class="form-control" required>
               <option value="">Select a service...</option>
               <option>Shopify Store Design</option>
               <option>TikTok Shop</option>
@@ -1173,10 +1173,11 @@ textarea.form-control { resize:vertical; min-height:120px; }
           </div>
           <div class="form-group">
             <label class="form-label">Tell me about your project</label>
-            <textarea class="form-control" placeholder="Describe your business, your goal, and where you're stuck..."></textarea>
+            <textarea name="message" class="form-control" placeholder="Describe your business, your goal, and where you're stuck..."></textarea>
           </div>
           <button type="submit" class="btn btn-solid" id="submit-btn" style="width:100%;font-size:15px;height:52px">Send message &rarr;</button>
           <p id="form-success" style="display:none;margin-top:16px;font-size:14px;color:var(--brand);text-align:center;font-weight:600;padding:16px;background:var(--brand-lt);border-radius:var(--r);">&#10003; Message sent! I'll be in touch within 24 hours.</p>
+          <p id="form-error" style="display:none;margin-top:16px;font-size:14px;color:#c0392b;text-align:center;font-weight:600;padding:16px;background:#fdf0ee;border-radius:var(--r);">&#10007; Something went wrong. Please try again or email me directly.</p>
         </form>
       </div>
     </div>
@@ -1313,9 +1314,29 @@ document.getElementById('port-testi-prev').addEventListener('click',function(){p
 /* ── FORM ─────────────────────────── */
 function handleForm(e) {
   e.preventDefault();
-  var btn=document.getElementById('submit-btn'), msg=document.getElementById('form-success');
+  var btn=document.getElementById('submit-btn');
+  var success=document.getElementById('form-success');
+  var error=document.getElementById('form-error');
+  var form=document.getElementById('contact-form');
   btn.textContent='Sending...'; btn.disabled=true;
-  setTimeout(function(){ btn.style.display='none'; msg.style.display='block'; }, 1200);
+  error.style.display='none';
+  fetch('https://formspree.io/f/xqeoopbe', {
+    method:'POST',
+    body: new FormData(form),
+    headers:{ 'Accept':'application/json' }
+  }).then(function(res){
+    if(res.ok){
+      btn.style.display='none';
+      success.style.display='block';
+      form.reset();
+    } else {
+      btn.textContent='Send message →'; btn.disabled=false;
+      error.style.display='block';
+    }
+  }).catch(function(){
+    btn.textContent='Send message →'; btn.disabled=false;
+    error.style.display='block';
+  });
 }
 
 /* ── INIT ─────────────────────────── */
