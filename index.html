@@ -93,8 +93,8 @@ nav {
 }
 nav.scrolled { box-shadow:0 2px 28px rgba(0,0,0,0.07); }
 .nav-left { display:flex; align-items:center; gap:44px; }
-.wordmark { font-family:var(--display); font-size:18px; font-weight:700; letter-spacing:.01em; color:var(--text); background:none; border:none; cursor:pointer; white-space:nowrap; }
-.wordmark span { color:var(--brand); }
+.wordmark { background:none; border:none; cursor:pointer; padding:0; display:flex; align-items:center; }
+.nav-logo { height:40px; width:auto; display:block; }
 .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
 .nav-links button { font-family:var(--body); font-size:13px; font-weight:500; color:var(--text2); background:none; border:none; cursor:pointer; transition:color 150ms; padding:4px 0; position:relative; }
 .nav-links button::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:2px; background:var(--brand); transform:scaleX(0); transition:transform 220ms var(--ease); transform-origin:left; }
@@ -359,6 +359,38 @@ footer { border-top:1px solid var(--border); padding:52px 60px; background:var(-
 .svc-full-card p { font-size:13px; line-height:1.8; color:var(--text2); margin-bottom:18px; }
 .svc-full-card.wide { grid-column:1/-1; }
 .price-badge { display:inline-flex; align-items:center; gap:6px; background:var(--brand-lt); color:var(--brand); font-size:13px; font-weight:700; padding:7px 16px; border-radius:20px; letter-spacing:.02em; }
+.svc-learn-btn { display:inline-flex; align-items:center; gap:6px; padding:9px 18px; border-radius:20px; border:1.5px solid var(--border); background:none; color:var(--brand); font-size:12px; font-weight:700; letter-spacing:.04em; cursor:pointer; font-family:var(--body); transition:background 150ms, border-color 150ms; margin-top:4px; }
+.svc-learn-btn:hover { background:var(--brand-lt); border-color:var(--brand); }
+
+/* ── SERVICE DETAIL PAGES ─────────── */
+.svc-detail-back-wrap { padding:28px 60px 0; max-width:1180px; margin:0 auto; }
+.svc-detail-back { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--text2); cursor:pointer; border:none; background:none; padding:0; transition:color 150ms; font-family:var(--body); }
+.svc-detail-back:hover { color:var(--brand); }
+.svc-detail-hero { padding:44px 60px 52px; max-width:1180px; margin:0 auto; border-bottom:1px solid var(--border); }
+.svc-detail-hero h1 { font-family:var(--display); font-size:clamp(34px,5vw,58px); font-weight:700; line-height:1.05; letter-spacing:-.02em; margin-bottom:18px; margin-top:12px; }
+.svc-detail-hero h1 em { font-style:italic; color:var(--brand); }
+.svc-detail-hero > p { font-size:15px; color:var(--text2); line-height:1.85; max-width:560px; }
+.svc-detail-main { padding:60px 60px 80px; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1fr 310px; gap:60px; align-items:start; }
+.svc-detail-text h2 { font-family:var(--display); font-size:20px; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; color:var(--text); }
+.svc-detail-text > p { font-size:14px; line-height:1.9; color:var(--text2); margin-bottom:24px; }
+.svc-feature-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:11px; }
+.svc-feature-item { display:flex; align-items:flex-start; gap:12px; font-size:13.5px; color:var(--text); line-height:1.5; }
+.svc-feature-check { width:20px; height:20px; border-radius:50%; background:var(--brand-lt); color:var(--brand); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.svc-highlight-card { background:var(--bg2); border:1.5px solid var(--border); border-radius:var(--r); padding:28px 24px; position:sticky; top:88px; }
+.svc-highlight-card h3 { font-family:var(--display); font-size:15px; font-weight:700; margin-bottom:16px; color:var(--text); }
+.svc-highlight-item { display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--border); font-size:13px; color:var(--text); font-weight:500; }
+.svc-highlight-item:last-child { border-bottom:none; }
+.svc-highlight-dot { width:7px; height:7px; border-radius:50%; background:var(--brand); flex-shrink:0; }
+.svc-hiw-section { background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:72px 60px; }
+.svc-hiw-inner { max-width:1180px; margin:0 auto; }
+.svc-hiw-inner h2 { font-family:var(--display); font-size:clamp(26px,3.5vw,40px); font-weight:700; letter-spacing:-.02em; margin-bottom:52px; text-align:center; }
+.svc-hiw-inner h2 em { font-style:italic; color:var(--brand); }
+.svc-hiw-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.svc-hiw-step { padding:0 28px; text-align:center; }
+.svc-hiw-step:not(:last-child) { border-right:1px solid var(--border); }
+.svc-step-num { font-family:var(--display); font-size:44px; font-weight:700; color:var(--brand); opacity:.2; line-height:1; margin-bottom:14px; }
+.svc-step-title { font-size:14px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.svc-step-desc { font-size:12.5px; color:var(--text2); line-height:1.7; }
 
 /* ── PORTFOLIO PAGE ─────────────── */
 .port-full-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
@@ -402,6 +434,9 @@ textarea.form-control { resize:vertical; min-height:120px; }
   .port-grid, .port-full-grid { grid-template-columns:1fr 1fr; }
   .svc-full-grid { grid-template-columns:1fr; }
   .svc-full-card.wide { grid-column:1; }
+  .svc-detail-main { grid-template-columns:1fr; }
+  .svc-hiw-grid { grid-template-columns:1fr 1fr; gap:36px; }
+  .svc-hiw-step:not(:last-child) { border-right:none; }
   .contact-grid { grid-template-columns:1fr; gap:48px; }
   .about-stats-inner { grid-template-columns:repeat(2,1fr); gap:32px; }
   .about-stat + .about-stat { border-left:none; }
@@ -415,6 +450,7 @@ textarea.form-control { resize:vertical; min-height:120px; }
 .hero-stats-mobile { display:none; }
 @media (max-width:640px) {
   nav { padding:0 20px; }
+  .nav-logo { height:30px; }
   .hero, .about-hero { padding:32px 20px 36px; gap:28px; }
   .section, .cta-slab, .testi-section, .about-stats-band, .about-story { padding-left:20px; padding-right:20px; }
   .page-hero { padding:36px 20px 28px; }
@@ -447,6 +483,9 @@ textarea.form-control { resize:vertical; min-height:120px; }
   /* Services page spacing */
   .svc-full-grid { gap:14px; }
   .svc-full-card { padding:24px 20px; }
+  .svc-detail-back-wrap, .svc-detail-hero, .svc-detail-main { padding-left:20px; padding-right:20px; }
+  .svc-hiw-section { padding:48px 20px; }
+  .svc-hiw-grid { grid-template-columns:1fr; }
 }
 
 /* ── HOW IT WORKS ────────────────── */
@@ -484,7 +523,7 @@ textarea.form-control { resize:vertical; min-height:120px; }
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <div class="nav-left">
-    <button class="wordmark" onclick="showPage('home')">Dynatech <span>Digital</span></button>
+    <button class="wordmark" onclick="showPage('home')"><img src="logo.png" alt="Dynatech Digital" class="nav-logo"></button>
     <ul class="nav-links">
       <li><button id="nav-home"      onclick="showPage('home')"      class="active">Home</button></li>
       <li><button id="nav-about"     onclick="showPage('about')">About</button></li>
@@ -597,20 +636,20 @@ textarea.form-control { resize:vertical; min-height:120px; }
   <!-- TICKER -->
   <div class="ticker-wrap">
     <div class="ticker-track">
-      <div class="ticker-item"><span class="ticker-dot"></span>Shopify Store Design</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>E-Commerce Website Development</div>
       <div class="ticker-item"><span class="ticker-dot"></span>TikTok Shop</div>
-      <div class="ticker-item"><span class="ticker-dot"></span>Product Listing</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Marketplace Setup</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Social Media Marketing</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Email Marketing</div>
       <div class="ticker-item"><span class="ticker-dot"></span>SEO</div>
-      <div class="ticker-item"><span class="ticker-dot"></span>Marketplace Management</div>
-      <div class="ticker-item"><span class="ticker-dot"></span>Shopify Store Design</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Shopify &bull; Wix &bull; WooCommerce</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>E-Commerce Website Development</div>
       <div class="ticker-item"><span class="ticker-dot"></span>TikTok Shop</div>
-      <div class="ticker-item"><span class="ticker-dot"></span>Product Listing</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Marketplace Setup</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Social Media Marketing</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Email Marketing</div>
       <div class="ticker-item"><span class="ticker-dot"></span>SEO</div>
-      <div class="ticker-item"><span class="ticker-dot"></span>Marketplace Management</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Amazon &bull; Etsy &bull; eBay</div>
     </div>
   </div>
 
@@ -626,39 +665,39 @@ textarea.form-control { resize:vertical; min-height:120px; }
     <div class="svc-grid">
       <div class="svc-card fade-up d1">
         <div class="svc-icon"><i data-lucide="shopping-bag" width="20" height="20"></i></div>
-        <div class="svc-name">Shopify Store Design</div>
-        <div class="svc-desc">Custom stores built for conversion — theme setup, product pages, checkout flows, and speed.</div>
-        <div class="svc-from">From $500</div>
+        <div class="svc-name">E-Commerce Website Development</div>
+        <div class="svc-desc">Custom stores on Shopify, WooCommerce, Wix, Squarespace & Webflow — built to convert.</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-ecommerce')">Learn More <span>&rarr;</span></button>
       </div>
       <div class="svc-card fade-up d2">
         <div class="svc-icon"><i data-lucide="video" width="20" height="20"></i></div>
         <div class="svc-name">TikTok Shop</div>
         <div class="svc-desc">Full TikTok Shop setup, catalogue sync, live shopping events, and affiliate strategy.</div>
-        <div class="svc-from">From $300</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-tiktok')">Learn More <span>&rarr;</span></button>
       </div>
       <div class="svc-card fade-up d3">
         <div class="svc-icon"><i data-lucide="package" width="20" height="20"></i></div>
-        <div class="svc-name">Product Listing</div>
-        <div class="svc-desc">SEO-optimised titles, descriptions, and A+ content that rank and convert.</div>
-        <div class="svc-from">From $25 / listing</div>
+        <div class="svc-name">Marketplace Setup</div>
+        <div class="svc-desc">Get listed and selling on Amazon, Etsy, eBay and beyond — fully optimised from day one.</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-marketplace')">Learn More <span>&rarr;</span></button>
       </div>
       <div class="svc-card fade-up d4">
         <div class="svc-icon"><i data-lucide="trending-up" width="20" height="20"></i></div>
         <div class="svc-name">Social Media Marketing</div>
         <div class="svc-desc">Strategy, content, and paid campaigns on Instagram, Facebook, and TikTok.</div>
-        <div class="svc-from">From $400 / mo</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-social')">Learn More <span>&rarr;</span></button>
       </div>
       <div class="svc-card fade-up d5">
         <div class="svc-icon"><i data-lucide="mail" width="20" height="20"></i></div>
         <div class="svc-name">Email Marketing</div>
         <div class="svc-desc">Klaviyo flows and campaigns that turn subscribers into loyal, repeat buyers.</div>
-        <div class="svc-from">From $350 / mo</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-email')">Learn More <span>&rarr;</span></button>
       </div>
       <div class="svc-card fade-up d6">
         <div class="svc-icon"><i data-lucide="search" width="20" height="20"></i></div>
-        <div class="svc-name">SEO &amp; Marketplace</div>
-        <div class="svc-desc">Organic visibility and managed presence on Amazon, Etsy, and beyond.</div>
-        <div class="svc-from">From $400 / mo</div>
+        <div class="svc-name">SEO</div>
+        <div class="svc-desc">Organic visibility that compounds — keyword research, on-page optimisation, and authority building.</div>
+        <button class="svc-learn-btn" onclick="showPage('svc-seo')">Learn More <span>&rarr;</span></button>
       </div>
     </div>
   </div>
@@ -699,14 +738,14 @@ textarea.form-control { resize:vertical; min-height:120px; }
       <div class="testi-big-quote">"</div>
       <div class="testi-slides" id="home-testi-slides">
         <div class="testi-slide active">
-          <p class="testi-quote">"John completely transformed our Shopify store. Within 60 days of the relaunch, our conversion rate jumped from 1.2% to 3.8%. The results speak for themselves."</p>
-          <div class="testi-author">Sarah K.</div>
-          <div class="testi-role">Founder, Bloom Beauty Co.</div>
+          <p class="testi-quote">"John redesigned our Shopify store from the ground up. The new look is clean, modern, and our customers love it — we saw an immediate lift in engagement after launch."</p>
+          <div class="testi-author">Laura T.</div>
+          <div class="testi-role">Founder, Mellow Sleep</div>
         </div>
         <div class="testi-slide">
-          <p class="testi-quote">"Working with John was the best investment I made for my brand. Our TikTok Shop went from zero to consistent daily orders in under two months."</p>
-          <div class="testi-author">Marcus D.</div>
-          <div class="testi-role">Co-founder, UrbanThreads Apparel</div>
+          <p class="testi-quote">"John built our Elegant Gem Shopify store from scratch. The design was exactly what we envisioned and the whole process was smooth from start to finish."</p>
+          <div class="testi-author">Amara O.</div>
+          <div class="testi-role">Founder, Elegant Gem</div>
         </div>
         <div class="testi-slide">
           <p class="testi-quote">"John's email marketing flows have been a game-changer. We went from 15% open rates to 48% and the abandoned cart recovery alone covers his monthly fee."</p>
@@ -817,7 +856,8 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="footer-social-links">
           <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
           <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
-          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><i data-lucide="fiverr" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
           <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
         </div>
       </div>
@@ -968,7 +1008,8 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="footer-social-links">
           <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
           <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
-          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><i data-lucide="fiverr" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
           <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
         </div>
       </div>
@@ -1008,39 +1049,34 @@ textarea.form-control { resize:vertical; min-height:120px; }
   <div class="section">
     <div class="svc-full-grid">
       <div class="svc-full-card fade-up">
-        <div class="num">01</div><h3>Shopify Store Design</h3>
-        <p>Custom Shopify builds engineered for conversion. Theme selection, product page layout, checkout optimisation, app integration, and page speed tuning.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $500</span>
+        <div class="num">01</div><h3>E-Commerce Website Development</h3>
+        <p>Custom builds on Shopify, WooCommerce, Wix, Squarespace &amp; Webflow — engineered for conversion. Theme setup, product pages, checkout optimisation, speed tuning, and SEO baked in. Shopify is my primary platform.</p>
+        <button class="svc-learn-btn" onclick="showPage('svc-ecommerce')">Learn More &rarr;</button>
       </div>
       <div class="svc-full-card fade-up d1">
         <div class="num">02</div><h3>TikTok Shop</h3>
         <p>End-to-end TikTok Shop setup — account creation, product catalogue sync, live shopping events, affiliate outreach, and content strategy.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $300</span>
+        <button class="svc-learn-btn" onclick="showPage('svc-tiktok')">Learn More &rarr;</button>
       </div>
       <div class="svc-full-card fade-up d2">
-        <div class="num">03</div><h3>Product Listing Optimisation</h3>
-        <p>Keyword-rich titles, benefit-led descriptions, structured bullet points, and A+ content that ranks and converts across all major marketplaces.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $25 / listing</span>
+        <div class="num">03</div><h3>Marketplace Setup</h3>
+        <p>Full marketplace setup across Amazon, Etsy, eBay, and beyond — account creation, keyword-rich listings, A+ content, PPC campaigns, inventory coordination, and review strategy.</p>
+        <button class="svc-learn-btn" onclick="showPage('svc-marketplace')">Learn More &rarr;</button>
       </div>
       <div class="svc-full-card fade-up d3">
         <div class="num">04</div><h3>Social Media Marketing</h3>
-        <p>Strategy, content creation, scheduling, and paid ad management across Instagram, Facebook, and TikTok tied to measurable outcomes.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $400 / mo</span>
+        <p>Strategy, content creation, scheduling, and paid ad management across Instagram, Facebook, and TikTok — tied to measurable revenue outcomes.</p>
+        <button class="svc-learn-btn" onclick="showPage('svc-social')">Learn More &rarr;</button>
       </div>
       <div class="svc-full-card fade-up d4">
         <div class="num">05</div><h3>Email Marketing</h3>
-        <p>Klaviyo and Mailchimp flows built to work while you sleep — welcome series, abandoned cart, post-purchase, and win-back sequences.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $350 / mo</span>
+        <p>Klaviyo, Mailchimp &amp; Omnisend flows built to work while you sleep — welcome series, abandoned cart, post-purchase, and win-back sequences.</p>
+        <button class="svc-learn-btn" onclick="showPage('svc-email')">Learn More &rarr;</button>
       </div>
       <div class="svc-full-card fade-up d5">
         <div class="num">06</div><h3>SEO</h3>
-        <p>On-page and technical SEO for e-commerce: keyword research, meta optimisation, site structure, internal linking, and content strategy.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $400 / mo</span>
-      </div>
-      <div class="svc-full-card wide fade-up d6">
-        <div class="num">07</div><h3>Marketplace Management</h3>
-        <p>Full-service management for Amazon, Etsy, and other platforms — listing creation, inventory coordination, PPC campaigns, review strategy, and performance reporting.</p>
-        <span class="price-badge"><i data-lucide="tag" width="13" height="13"></i> From $500 / mo</span>
+        <p>On-page and technical SEO for e-commerce: keyword research, meta optimisation, site structure, internal linking, content strategy, and link building.</p>
+        <button class="svc-learn-btn" onclick="showPage('svc-seo')">Learn More &rarr;</button>
       </div>
     </div>
   </div>
@@ -1057,7 +1093,8 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="footer-social-links">
           <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
           <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
-          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><i data-lucide="fiverr" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
           <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
         </div>
       </div>
@@ -1068,6 +1105,652 @@ textarea.form-control { resize:vertical; min-height:120px; }
           <a href="#" onclick="showPage('about');return false">About</a>
           <a href="#" onclick="showPage('portfolio');return false">Portfolio</a>
           <a href="#" onclick="showPage('contact');return false">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: E-COMMERCE WEBSITE DEVELOPMENT
+════════════════════════════════ -->
+<div id="svc-ecommerce-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">E-Commerce Website Development</p>
+    <h1>Build a Store That <em>Sells</em> —<br>Not Just a Site That Sits</h1>
+    <p>Your e-commerce site should be making you money. I design and build high-converting stores on Shopify, WooCommerce, Wix, Squarespace & Webflow — engineered to move visitors to checkout fast. Shopify is my primary platform.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>We combine speed, sales psychology, and scalable design to create stores that not only look clean — but convert consistently. Every build starts with intent, driven by your target market, product value, and growth goals.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Fully customised Shopify / WooCommerce / Wix / Squarespace / Webflow storefront</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Mobile-optimised, responsive layout for fast checkout anywhere</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Product uploads with SEO-optimised titles and descriptions</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Integrated payment gateways, shipping &amp; tax automation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Strategic homepage layout built to drive product discovery</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Category pages with filters and search functionality</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>High-conversion product pages with upsell &amp; trust elements</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Email integration for marketing automation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Basic on-page SEO setup (URLs, metadata, speed enhancements)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Third-party app integrations (reviews, timers, upsells, etc.)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Speed and performance optimisation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Post-launch support &amp; consultation</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Feature Highlights</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Built to Sell</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Niche-Focused Strategy</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Launch in 7 Days or Less</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>SEO &amp; Conversion-Ready</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Scalable Infrastructure</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">Book a Free Strategy Call</div>
+          <div class="svc-step-desc">We dive deep into your goals, product line, and target customer. This is where we plan your winning store blueprint.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">Get a Custom Build Plan</div>
+          <div class="svc-step-desc">Based on your niche and growth objectives, we design a tailored store structure — from layout to product architecture.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">We Build. You Relax.</div>
+          <div class="svc-step-desc">Our expert team handles everything: design, setup, integration, and testing — delivered in under 7 days.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Launch &amp; Scale</div>
+          <div class="svc-step-desc">Once live, we review performance and help you plan the next growth phase — ads, email flows, or automation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to build<br>your store?</h2>
+    <p class="cta-sub">Let's build your online storefront the right way — from day one.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: TIKTOK SHOP
+════════════════════════════════ -->
+<div id="svc-tiktok-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">TikTok Shop Setup</p>
+    <h1>Turn Views into <em>Revenue</em><br>on TikTok</h1>
+    <p>Full TikTok Shop setup from zero to daily orders — account creation, product catalogue sync, live shopping strategy, and affiliate outreach that drives consistent sales.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>TikTok is the fastest-growing social commerce platform. I help you set up, optimise, and grow your TikTok Shop — so you can tap into millions of buyers scrolling right now.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>TikTok Business Account setup &amp; verification</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Product catalogue sync &amp; listing optimisation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Live shopping event strategy &amp; setup</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Affiliate programme outreach &amp; management</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Content strategy for organic product discovery</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>TikTok Ads setup (Spark Ads, Video Shopping Ads)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Pixel &amp; conversion tracking setup</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Monthly performance reporting &amp; growth recommendations</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Feature Highlights</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Zero to Daily Orders</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Affiliate Network Access</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Live Shopping Strategy</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Paid &amp; Organic Growth</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Full Account Management</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">Account &amp; Niche Audit</div>
+          <div class="svc-step-desc">We assess your brand, products, and target audience to map out the right TikTok Shop strategy before spending a penny.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">Shop Setup &amp; Catalogue Sync</div>
+          <div class="svc-step-desc">Account creation, product syncing, and listing optimisation — everything ready for your first sale.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">Launch Content &amp; Ads</div>
+          <div class="svc-step-desc">We activate your affiliate network, schedule live events, and launch targeted ad campaigns to drive traffic and sales.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Scale &amp; Optimise</div>
+          <div class="svc-step-desc">Monthly reporting, campaign refinement, and ongoing growth strategy to keep your revenue climbing.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to launch<br>your TikTok Shop?</h2>
+    <p class="cta-sub">Let's get your products in front of millions — starting this week.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: MARKETPLACE SETUP
+════════════════════════════════ -->
+<div id="svc-marketplace-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">Marketplace Setup</p>
+    <h1>Sell Everywhere<br>That <em>Matters</em></h1>
+    <p>Full marketplace setup and optimisation across Amazon, Etsy, eBay, and beyond — from account creation to listings that rank, convert, and generate consistent revenue.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>The world's biggest marketplaces are where buyers already are. I set up your presence the right way — with keyword-rich listings, compelling content, and smart ad strategies that put your products in front of the right customers.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Amazon Seller Central account setup &amp; verification</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Etsy &amp; eBay shop creation, branding &amp; policy setup</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Keyword research &amp; SEO-optimised product listings</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>A+ Content / Enhanced Brand Content (Amazon)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>PPC campaign setup &amp; management</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Review strategy &amp; brand protection</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Inventory coordination &amp; performance reporting</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Ongoing account management &amp; optimisation</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Platforms Covered</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Amazon</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Etsy</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>eBay</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Walmart Marketplace</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>And beyond</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">Platform &amp; Product Audit</div>
+          <div class="svc-step-desc">We identify the best marketplaces for your products, analyse competitors, and build a listing strategy to outrank them.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">Account &amp; Shop Setup</div>
+          <div class="svc-step-desc">From account creation and branding to policies and payment setup — everything is configured correctly from day one.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">List &amp; Launch</div>
+          <div class="svc-step-desc">Fully optimised listings go live with keyword-rich titles, benefit-led descriptions, A+ content, and ad campaigns running.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Manage &amp; Scale</div>
+          <div class="svc-step-desc">Ongoing PPC management, review strategy, and monthly reporting keeps your presence growing and profitable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to get<br>listed &amp; selling?</h2>
+    <p class="cta-sub">Your products belong on every platform your customers shop on.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: SOCIAL MEDIA MARKETING
+════════════════════════════════ -->
+<div id="svc-social-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">Social Media Marketing</p>
+    <h1>Stop Posting.<br><em>Start Converting.</em></h1>
+    <p>Data-driven paid and organic social strategies on Facebook, Instagram, and TikTok — designed to turn your audience into customers, not just followers.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>Most brands waste money on social media ads that get clicks but no sales. I build campaigns around your product, your margins, and your ideal customer — tied to real, measurable revenue outcomes every month.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Paid ad campaign creation &amp; management (Facebook, Instagram, TikTok)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Content strategy &amp; monthly content calendar</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Audience targeting, lookalike &amp; retargeting setup</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Ad creative design &amp; conversion-focused copywriting</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>A/B testing &amp; campaign optimisation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Pixel setup &amp; conversion event tracking</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Monthly performance reports &amp; strategy reviews</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Community management &amp; engagement (on request)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Feature Highlights</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>ROAS-Focused Strategy</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Full Funnel Coverage</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Creative &amp; Copy Included</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Weekly Reporting</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Facebook, Instagram &amp; TikTok</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">Brand &amp; Audience Audit</div>
+          <div class="svc-step-desc">We analyse your brand, competitors, and ideal customer to define a targeted strategy before launching any campaigns.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">Creative &amp; Campaign Build</div>
+          <div class="svc-step-desc">Ad creatives, copy, targeting, and campaign structure are built with conversion — not just reach — as the goal.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">Launch &amp; Test</div>
+          <div class="svc-step-desc">Campaigns go live with real-time monitoring. We A/B test continuously to find what drives the best ROAS for your product.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Optimise &amp; Scale</div>
+          <div class="svc-step-desc">Each month, we review results, cut what doesn't work, and scale what does — steadily growing your return on ad spend.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to turn<br>clicks into customers?</h2>
+    <p class="cta-sub">Let's build a social strategy that actually drives revenue.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: EMAIL MARKETING
+════════════════════════════════ -->
+<div id="svc-email-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">Email Marketing</p>
+    <h1>Turn Inboxes<br>into <em>Income</em></h1>
+    <p>Klaviyo, Mailchimp &amp; Omnisend flows built to generate sales on autopilot — welcome series, abandoned cart, post-purchase upsells, and win-back campaigns that work while you sleep.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>Email is still the highest-ROI channel in e-commerce. I build smart automation flows and broadcast campaigns that recover abandoned carts, nurture leads, and turn one-time buyers into loyal, repeat customers.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Welcome series setup &amp; copywriting</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Abandoned cart recovery flow (typically 10–15% recovery rate)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Post-purchase &amp; upsell sequences</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Win-back campaigns for lapsed subscribers</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Broadcast campaign management (weekly / bi-weekly)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>List segmentation &amp; A/B testing</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Pop-up &amp; sign-up form design &amp; setup</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Monthly analytics &amp; performance reporting</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Platforms Supported</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Klaviyo</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Mailchimp</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Omnisend</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Drip</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>ActiveCampaign</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">List &amp; Platform Audit</div>
+          <div class="svc-step-desc">We review your current email setup, list health, and existing flows to identify quick wins and long-term opportunities.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">Flow Design &amp; Copy</div>
+          <div class="svc-step-desc">Email flows are built with your brand voice, designed for mobile, and written to drive clicks — not just opens.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">Set Live &amp; Monitor</div>
+          <div class="svc-step-desc">Flows go live and we monitor open rates, CTR, and revenue attribution in real time — fixing anything that underperforms.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Test &amp; Optimise</div>
+          <div class="svc-step-desc">Monthly A/B testing, list cleaning, and campaign refinements keep your email revenue growing month over month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to make<br>email work for you?</h2>
+    <p class="cta-sub">Let's build flows that generate revenue while you focus on running your business.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <div class="footer-contact-links">
+          <a href="mailto:jgreat462@gmail.com"><i data-lucide="mail" width="14" height="14"></i> jgreat462@gmail.com</a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1"><i data-lucide="message-circle" width="14" height="14"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">&copy; 2026 John Adeyemo. All rights reserved.</div></div>
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════
+     SERVICE: SEO
+════════════════════════════════ -->
+<div id="svc-seo-page" class="page">
+  <div class="svc-detail-back-wrap">
+    <button class="svc-detail-back" onclick="showPage('services')"><i data-lucide="arrow-left" width="14" height="14"></i> Back to Services</button>
+  </div>
+  <div class="svc-detail-hero">
+    <p class="eyebrow">SEO</p>
+    <h1>Get Found. Get <em>Ranked.</em><br>Get Paid.</h1>
+    <p>On-page, technical, and off-page SEO for e-commerce stores — designed to climb Google's rankings and stay there. More organic traffic, better leads, real revenue.</p>
+  </div>
+  <div class="svc-detail-main">
+    <div class="svc-detail-text">
+      <h2>What's Included</h2>
+      <p>I don't just build websites — I build authority. A well-optimised store ranks above competitors, attracts buyers with high purchase intent, and compounds over time without paying for every click.</p>
+      <ul class="svc-feature-list">
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>In-depth keyword research &amp; competitor analysis</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>On-page meta optimisation (titles, descriptions, H-tags)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Technical SEO audit &amp; fixes (speed, crawlability, schema)</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Internal linking strategy &amp; site structure optimisation</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Content strategy &amp; blog planning for long-tail keywords</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Backlink outreach &amp; quality link building</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Core Web Vitals &amp; page experience improvements</li>
+        <li class="svc-feature-item"><span class="svc-feature-check"><i data-lucide="check" width="11" height="11"></i></span>Monthly ranking reports &amp; actionable insights</li>
+      </ul>
+    </div>
+    <div>
+      <div class="svc-highlight-card">
+        <h3>Feature Highlights</h3>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Long-Term Organic Growth</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Technical SEO Audit</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Link Building Included</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>E-Commerce Focused</div>
+        <div class="svc-highlight-item"><span class="svc-highlight-dot"></span>Monthly Rank Tracking</div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hiw-section">
+    <div class="svc-hiw-inner">
+      <h2>How It <em>Works</em></h2>
+      <div class="svc-hiw-grid">
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">01</div>
+          <div class="svc-step-title">SEO Audit &amp; Research</div>
+          <div class="svc-step-desc">Full technical audit of your store, keyword opportunity analysis, and a gap assessment against your top competitors.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">02</div>
+          <div class="svc-step-title">On-Page Optimisation</div>
+          <div class="svc-step-desc">Meta tags, product descriptions, site structure, and internal links are all updated to match search intent and target keywords.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">03</div>
+          <div class="svc-step-title">Technical Fixes &amp; Content</div>
+          <div class="svc-step-desc">Speed improvements, schema markup, crawl error fixes, and content creation for high-value keyword targets.</div>
+        </div>
+        <div class="svc-hiw-step">
+          <div class="svc-step-num">04</div>
+          <div class="svc-step-title">Build Authority &amp; Track</div>
+          <div class="svc-step-desc">Quality backlinks are built, rankings tracked monthly, and strategy refined to compound your search visibility over time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-slab">
+    <h2 class="cta-headline">Ready to rank<br>higher &amp; sell more?</h2>
+    <p class="cta-sub">Let's build a search strategy that drives organic revenue — not just traffic.</p>
+    <button class="btn-white" onclick="showPage('contact')">Book a free consultation &rarr;</button>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-wordmark">Dynatech <span>Digital</span></div>
+        <p class="footer-tagline">The growth partner your e-commerce business deserves.</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
+          <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-nav-links">
+          <a href="#" onclick="showPage('svc-ecommerce');return false">E-Commerce Dev</a>
+          <a href="#" onclick="showPage('svc-tiktok');return false">TikTok Shop</a>
+          <a href="#" onclick="showPage('svc-marketplace');return false">Marketplace Setup</a>
+          <a href="#" onclick="showPage('svc-social');return false">Social Media</a>
+          <a href="#" onclick="showPage('svc-email');return false">Email Marketing</a>
+          <a href="#" onclick="showPage('svc-seo');return false">SEO</a>
         </div>
       </div>
       <div>
@@ -1140,20 +1823,20 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="port-flip">
           <div class="port-flip-front">
             <div class="port-thumb">
-              <img src="portfolio-bloom-beauty.jpg" alt="Bloom Beauty Co." onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="port-thumb-ph" style="display:none"><i data-lucide="shopping-bag" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">Bloom Beauty Co.</div></div>
+              <img src="portfolio-mellow-sleep.jpg" alt="Mellow Sleep" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="port-thumb-ph" style="display:none"><i data-lucide="shopping-bag" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">Mellow Sleep</div></div>
             </div>
             <div class="port-info">
-              <div class="port-tag">Shopify Design</div>
-              <div class="port-title">Bloom Beauty Co.</div>
-              <div class="port-result">Conversion rate: 1.2% &rarr; 3.8% in 60 days</div>
+              <div class="port-tag">Shopify Redesign</div>
+              <div class="port-title">Mellow Sleep</div>
+              <div class="port-result">Full Shopify redesign &amp; UX overhaul</div>
             </div>
           </div>
           <div class="port-flip-back">
-            <div class="port-back-tag">Shopify Design</div>
-            <div class="port-back-title">Bloom Beauty Co.</div>
-            <div class="port-back-result">Conversion rate: 1.2% &rarr; 3.8% in 60 days</div>
-            <a href="#" onclick="showPage('contact');return false" class="port-back-link">Work with me &rarr;</a>
+            <div class="port-back-tag">Shopify Redesign</div>
+            <div class="port-back-title">Mellow Sleep</div>
+            <div class="port-back-result">Full Shopify store redesign, theme customisation &amp; conversion optimisation</div>
+            <a href="https://mellowsleep.com/" target="_blank" rel="noopener" class="port-back-link">Visit site &rarr;</a>
           </div>
         </div>
       </div>
@@ -1161,20 +1844,20 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="port-flip">
           <div class="port-flip-front">
             <div class="port-thumb">
-              <img src="portfolio-urbanthreads.jpg" alt="UrbanThreads Apparel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="port-thumb-ph" style="display:none"><i data-lucide="video" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">UrbanThreads Apparel</div></div>
+              <img src="portfolio-elegant-gem.jpg" alt="Elegant Gem" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="port-thumb-ph" style="display:none"><i data-lucide="gem" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">Elegant Gem</div></div>
             </div>
             <div class="port-info">
-              <div class="port-tag">TikTok Shop</div>
-              <div class="port-title">UrbanThreads Apparel</div>
-              <div class="port-result">&pound;42,000 revenue in first 60 days</div>
+              <div class="port-tag">Shopify Design</div>
+              <div class="port-title">Elegant Gem</div>
+              <div class="port-result">Custom Shopify store built from scratch</div>
             </div>
           </div>
           <div class="port-flip-back">
-            <div class="port-back-tag">TikTok Shop</div>
-            <div class="port-back-title">UrbanThreads Apparel</div>
-            <div class="port-back-result">&pound;42,000 revenue in first 60 days</div>
-            <a href="#" onclick="showPage('contact');return false" class="port-back-link">Work with me &rarr;</a>
+            <div class="port-back-tag">Shopify Design</div>
+            <div class="port-back-title">Elegant Gem</div>
+            <div class="port-back-result">Custom Shopify store design, product setup &amp; full brand launch</div>
+            <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?p=2049121047553662976" target="_blank" rel="noopener" class="port-back-link">View project &rarr;</a>
           </div>
         </div>
       </div>
@@ -1203,19 +1886,19 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="port-flip">
           <div class="port-flip-front">
             <div class="port-thumb">
-              <img src="portfolio-fitfuel.jpg" alt="FitFuel Nutrition" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="port-thumb-ph" style="display:none"><i data-lucide="trending-up" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">FitFuel Nutrition</div></div>
+              <img src="portfolio-tiktok-listing.jpg" alt="TikTok Shop Product Listing" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="port-thumb-ph" style="display:none"><i data-lucide="video" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">TikTok Shop Product Listing</div></div>
             </div>
             <div class="port-info">
-              <div class="port-tag">Social Media</div>
-              <div class="port-title">FitFuel Nutrition</div>
-              <div class="port-result">4.1&times; ROAS on Facebook ad campaign</div>
+              <div class="port-tag">TikTok Shop</div>
+              <div class="port-title">TikTok Shop Product Listing</div>
+              <div class="port-result">Listings optimised for TikTok Shop discovery</div>
             </div>
           </div>
           <div class="port-flip-back">
-            <div class="port-back-tag">Social Media</div>
-            <div class="port-back-title">FitFuel Nutrition</div>
-            <div class="port-back-result">4.1&times; ROAS on Facebook ad campaign</div>
+            <div class="port-back-tag">TikTok Shop</div>
+            <div class="port-back-title">TikTok Shop Product Listing</div>
+            <div class="port-back-result">SEO-optimised product listings &amp; TikTok Shop content strategy</div>
             <a href="#" onclick="showPage('contact');return false" class="port-back-link">Work with me &rarr;</a>
           </div>
         </div>
@@ -1224,20 +1907,20 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="port-flip">
           <div class="port-flip-front">
             <div class="port-thumb">
-              <img src="portfolio-homenest.jpg" alt="HomeNest Décor" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="port-thumb-ph" style="display:none"><i data-lucide="search" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">HomeNest Décor</div></div>
+              <img src="portfolio-tendenxy.jpg" alt="Tendenxy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="port-thumb-ph" style="display:none"><i data-lucide="shirt" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">Tendenxy</div></div>
             </div>
             <div class="port-info">
-              <div class="port-tag">SEO</div>
-              <div class="port-title">HomeNest Décor</div>
-              <div class="port-result">Top-3 rankings for core keywords in 4 months</div>
+              <div class="port-tag">Fashion Store Design</div>
+              <div class="port-title">Tendenxy</div>
+              <div class="port-result">Fashion Shopify store design &amp; brand launch</div>
             </div>
           </div>
           <div class="port-flip-back">
-            <div class="port-back-tag">SEO</div>
-            <div class="port-back-title">HomeNest Décor</div>
-            <div class="port-back-result">Top-3 rankings for core keywords in 4 months</div>
-            <a href="#" onclick="showPage('contact');return false" class="port-back-link">Work with me &rarr;</a>
+            <div class="port-back-tag">Fashion Store Design</div>
+            <div class="port-back-title">Tendenxy</div>
+            <div class="port-back-result">Full fashion store design, theme customisation &amp; brand identity</div>
+            <a href="https://tendenxy.com/" target="_blank" rel="noopener" class="port-back-link">Visit site &rarr;</a>
           </div>
         </div>
       </div>
@@ -1245,19 +1928,19 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="port-flip">
           <div class="port-flip-front">
             <div class="port-thumb">
-              <img src="portfolio-purekitchen.jpg" alt="PureKitchen Co." onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="port-thumb-ph" style="display:none"><i data-lucide="shopping-bag" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">PureKitchen Co.</div></div>
+              <img src="portfolio-tiktok-marketing.jpg" alt="TikTok Shop Marketing" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="port-thumb-ph" style="display:none"><i data-lucide="trending-up" width="28" height="28"></i><div class="port-thumb-ph-dot"></div><div class="port-thumb-ph-label">TikTok Shop Marketing</div></div>
             </div>
             <div class="port-info">
-              <div class="port-tag">Shopify Design</div>
-              <div class="port-title">PureKitchen Co.</div>
-              <div class="port-result">28% increase in average order value post-redesign</div>
+              <div class="port-tag">TikTok Shop</div>
+              <div class="port-title">TikTok Shop Marketing</div>
+              <div class="port-result">TikTok Shop campaigns &amp; content strategy</div>
             </div>
           </div>
           <div class="port-flip-back">
-            <div class="port-back-tag">Shopify Design</div>
-            <div class="port-back-title">PureKitchen Co.</div>
-            <div class="port-back-result">28% increase in average order value post-redesign</div>
+            <div class="port-back-tag">TikTok Shop</div>
+            <div class="port-back-title">TikTok Shop Marketing</div>
+            <div class="port-back-result">TikTok Shop ad campaigns, influencer outreach &amp; organic content strategy</div>
             <a href="#" onclick="showPage('contact');return false" class="port-back-link">Work with me &rarr;</a>
           </div>
         </div>
@@ -1269,16 +1952,16 @@ textarea.form-control { resize:vertical; min-height:120px; }
       <div class="testi-big-quote">"</div>
       <div class="testi-slides" id="port-testi-slides">
         <div class="testi-slide active">
-          <p class="testi-quote">"Working with John was the best investment I made for my brand. Our TikTok Shop went from zero to consistent daily orders in under two months."</p>
-          <div class="testi-author">Marcus D.</div><div class="testi-role">Co-founder, UrbanThreads Apparel</div>
+          <p class="testi-quote">"John redesigned our Shopify store from the ground up. The new look is clean, modern, and our customers love it — we saw an immediate lift in engagement after launch."</p>
+          <div class="testi-author">Laura T.</div><div class="testi-role">Founder, Mellow Sleep</div>
         </div>
         <div class="testi-slide">
-          <p class="testi-quote">"John's SEO work brought us more organic traffic in 4 months than 2 years of paid ads. We're now ranking top-3 for our main keywords."</p>
-          <div class="testi-author">Amelia R.</div><div class="testi-role">Founder, HomeNest D&eacute;cor</div>
+          <p class="testi-quote">"John built our Elegant Gem Shopify store from scratch. The design was exactly what we envisioned and the whole process was smooth from start to finish."</p>
+          <div class="testi-author">Amara O.</div><div class="testi-role">Founder, Elegant Gem</div>
         </div>
         <div class="testi-slide">
-          <p class="testi-quote">"The Shopify store John built is exactly what we needed — clean, fast, and converting. Our average order value went up 28% after the redesign."</p>
-          <div class="testi-author">David O.</div><div class="testi-role">CEO, PureKitchen Co.</div>
+          <p class="testi-quote">"Our Tendenxy fashion store looks incredible. John captured our brand perfectly — the design is stylish, professional and exactly what our customers expect."</p>
+          <div class="testi-author">Kemi A.</div><div class="testi-role">Founder, Tendenxy</div>
         </div>
       </div>
       <div class="testi-controls">
@@ -1300,7 +1983,8 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="footer-social-links">
           <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
           <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
-          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><i data-lucide="fiverr" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
           <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
         </div>
       </div>
@@ -1372,13 +2056,12 @@ textarea.form-control { resize:vertical; min-height:120px; }
             <label class="form-label">Service needed</label>
             <select name="service" class="form-control" required>
               <option value="">Select a service...</option>
-              <option>Shopify Store Design</option>
-              <option>TikTok Shop</option>
-              <option>Product Listing Optimisation</option>
+              <option>E-Commerce Website Development</option>
+              <option>TikTok Shop Setup</option>
+              <option>Marketplace Setup</option>
               <option>Social Media Marketing</option>
               <option>Email Marketing</option>
               <option>SEO</option>
-              <option>Marketplace Management</option>
               <option>Multiple / Not sure yet</option>
             </select>
           </div>
@@ -1401,7 +2084,8 @@ textarea.form-control { resize:vertical; min-height:120px; }
         <div class="footer-social-links">
           <a href="https://www.instagram.com/glamex_pert63" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram" width="15" height="15"></i></a>
           <a href="https://www.tiktok.com/@growth_expert__" target="_blank" rel="noopener" aria-label="TikTok"><i data-lucide="music-2" width="15" height="15"></i></a>
-          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><i data-lucide="fiverr" width="15" height="15"></i></a>
+          <a href="https://www.fiverr.com/adeyemo_pro20" target="_blank" rel="noopener" aria-label="Fiverr"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="19" width="18" height="2.5" rx=".5"/><rect x="3" y="11.5" width="18" height="2.5" rx=".5"/><rect x="3" y="5.5" width="4" height="16"/><rect x="17" y="5.5" width="4" height="16"/><path d="M7 5.5Q12 1 17 5.5L17 7.5Q12 3 7 7.5Z"/><circle cx="19" cy="3" r="2.2"/></svg></a>
+          <a href="https://www.upwork.com/freelancers/~01b498e635a48e78aa?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
           <a href="https://wa.me/message/SP5P5MC62YEBO1" aria-label="WhatsApp"><i data-lucide="message-circle" width="15" height="15"></i></a>
         </div>
       </div>
@@ -1446,7 +2130,8 @@ function loadSavedPhoto() {
 }
 
 /* ── PAGE ROUTING ─────────────────── */
-function showPage(id) {
+function showPage(id, skipHistory) {
+  if (!document.getElementById(id+'-page')) id = 'home';
   document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('.nav-links button').forEach(function(b){ b.classList.remove('active'); });
   document.getElementById(id+'-page').classList.add('active');
@@ -1455,7 +2140,15 @@ function showPage(id) {
   lucide.createIcons();
   setTimeout(triggerAnimations, 60);
   setTimeout(animateCounters, 500);
+  if (!skipHistory) {
+    history.pushState({page: id}, '', '#' + id);
+  }
 }
+
+window.addEventListener('popstate', function(e) {
+  var id = (e.state && e.state.page) ? e.state.page : (location.hash.slice(1) || 'home');
+  showPage(id, true);
+});
 
 /* ── MOBILE NAV ─────────────────── */
 var mobileNavOpen = false;
@@ -1560,11 +2253,14 @@ document.querySelectorAll('.port-card').forEach(function(card){
 });
 
 /* ── INIT ─────────────────────────── */
-lucide.createIcons();
 loadSavedPhoto();
-setTimeout(triggerAnimations, 60);
+(function() {
+  var hash = location.hash.slice(1);
+  var startPage = (hash && document.getElementById(hash + '-page')) ? hash : 'home';
+  history.replaceState({page: startPage}, '', '#' + startPage);
+  showPage(startPage, true);
+})();
 setTimeout(function(){ document.querySelectorAll('.fade-up,.fade-in').forEach(function(el){el.classList.add('visible');}); }, 800);
-setTimeout(animateCounters, 500);
 startAutoSlide('home');
 startAutoSlide('port');
 </script>
